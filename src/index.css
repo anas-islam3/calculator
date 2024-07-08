@@ -1,0 +1,84 @@
+
+.calculator-main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.calculator {
+    max-width: 500px;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 2px solid #e1d9d1;
+   
+}
+
+.calculator .display {
+    min-height: 50px;
+    margin-bottom: 20px;
+    font-family: "digital-7", sans-serif;
+    font-size: 1.8rem;
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #d2faf9;
+    border: 2px solid gray;
+    border-radius: 10px;
+}
+
+.calculator .display span {
+    min-width: 80px;
+    text-align: right;
+    padding-right: 10px;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: gray;
+}
+
+.calculator .buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 50px);
+    background-color: #779983;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 10px;
+}
+
+.calculator .buttons .span-two {
+    grid-row: span 2;
+}
+
+.calculator .buttons button {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding: 0px 10px;
+    border: 0px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.calculator .buttons button:hover {
+    transform: scale(1.05);
+}
+
+button.hamburger {
+    position: absolute;
+    top: 20;
+    z-index: 1000;
+    flex: 1 1 100%;
+  }
+
+@media only screen and (max-width: 400px) {
+    .calculator .buttons button {
+        font-size: 1.1rem;
+    }
+}
